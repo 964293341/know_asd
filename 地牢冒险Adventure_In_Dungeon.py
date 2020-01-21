@@ -43,7 +43,7 @@ food = 0
 quality_n = 0
 while quality_n < 3:
     quality_n = quality_n + 1
-    quality_s = int(random.uniform(1,14))
+    quality_s = random.randint(1, 13)
     health = health + quality_s
     if lan == 1:
         print('血量增加%d' % (quality_s))
@@ -53,7 +53,7 @@ while quality_n < 3:
 quality_n = 0
 while quality_n < 3:
     quality_n = quality_n + 1
-    quality_s = int(random.uniform(1,14))
+    quality_s = random.randint(1, 13)
     armor = armor + quality_s
     if lan == 1:
         print('护甲增加%d' % (quality_s))
@@ -63,7 +63,7 @@ while quality_n < 3:
 quality_n = 0
 while quality_n < 1:
     quality_n = quality_n + 1
-    quality_s = int(random.uniform(1,14))
+    quality_s = random.randint(1, 13)
     attack = attack + quality_s
     if lan == 1:
         print('攻击增加%d' % (quality_s))
@@ -73,7 +73,7 @@ while quality_n < 1:
 quality_n = 0
 while quality_n < 2:
     quality_n = quality_n + 1
-    quality_s = int(random.uniform(1,14))
+    quality_s = random.randint(1, 13)
     money = money + quality_s
     if lan == 1:
         print('金钱增加%d' % (quality_s))
@@ -83,7 +83,7 @@ while quality_n < 2:
 quality_n = 0
 while quality_n < 2:
     quality_n = quality_n + 1
-    quality_s = int(random.uniform(1,14))
+    quality_s = random.randint(1, 13)
     food = food + quality_s
     if lan == 1:
         print('食物增加%d' % (quality_s))
@@ -112,10 +112,10 @@ while s3 == 0:
         armor = armor_s
     player = 'Health:%d, Armor:%d, Attack:%d, Money:%d, Food:%d' % (health, armor, attack, money, food)
     print(player)
-    w = int(random.uniform(1,5))
-    a = int(random.uniform(1,5))
-    d = int(random.uniform(1,5))
-    s = int(random.uniform(1,5))
+    w = random.randint(1, 4)
+    a = random.randint(1, 4)
+    d = random.randint(1, 4)
+    s = random.randint(1, 4)
     #
     if w == 1:
         if lan == 1:
@@ -220,7 +220,7 @@ while s3 == 0:
         elif lan == 2:
             print('battle!')
         non_attack = 0
-        non_health = int(random.uniform(1, 14))
+        non_health = random.randint(1, 13)
         battle_s = 0
         while battle_s == 0:
             print('#')
@@ -230,7 +230,7 @@ while s3 == 0:
                 print('敌人：', non_health)
             elif lan == 2:
                 print('enemy:', non_health)
-            non_attack = int(random.uniform(1, 14))
+            non_attack = random.randint(1, 13)
             if lan == 1:
                 print('受击%d' % (non_attack))
             elif lan == 2:
@@ -255,17 +255,17 @@ while s3 == 0:
             else:
                 wugan = input('[Enter]')
         if battle_s == 1:
-            money = money + int(random.uniform(1, 14))
+            money = money + random.randint(1, 13)
             if lan == 1:
                 print('金钱增加')
             elif lan == 2:
                 print('money increase')
-            food = food + int(random.uniform(1, 14))
+            food = food + random.randint(1, 13)
             if lan == 1:
                 print('食物增加')
             elif lan == 2:
                 print('food increase')
-            food = food - int(random.uniform(1, 14))
+            food = food - random.randint(1, 13)
             if lan == 1:
                 print('吃饭')
             elif lan == 2:
@@ -278,7 +278,7 @@ while s3 == 0:
         elif lan == 2:
             print('battle!')
         non_attack = 0
-        non_health = int(random.uniform(1, 14))
+        non_health = random.randint(1, 13)
         battle_n = 0
         battle_s = 0
         while battle_s == 0:
@@ -290,7 +290,7 @@ while s3 == 0:
                 print('敌人：', non_health)
             elif lan == 2:
                 print('enemy:', non_health)
-            non_attack = int(random.uniform(1, 14))
+            non_attack = random.randint(1, 13)
             if lan == 1:
                 print('受击%d' % (non_attack))
             elif lan == 2:
@@ -326,17 +326,17 @@ while s3 == 0:
             else:
                 wugan = input('[Enter]')
         if battle_s == 1:
-            money = money + int(random.uniform(1, 14))
+            money = money + random.randint(1, 13)
             if lan == 1:
                 print('金钱增加')
             elif lan == 2:
                 print('money increase')
-            food = food + int(random.uniform(1, 14))
+            food = food + random.randint(1, 13)
             if lan == 1:
                 print('食物增加')
             elif lan == 2:
                 print('food increase')
-            food = food - int(random.uniform(1, 14))
+            food = food - random.randint(1, 13)
             if lan == 1:
                 print('吃饭')
             elif lan == 2:
@@ -357,7 +357,7 @@ while s3 == 0:
         elif lan == 2:
             print('[A food->money, B money->food， C quit]')
         shop_choose = input('choose:')
-        shop_s = int(random.uniform(1, 14))
+        shop_s = random.randint(1, 13)
         if shop_choose == 'A':
             food = food - shop_s
             money = money + shop_s
