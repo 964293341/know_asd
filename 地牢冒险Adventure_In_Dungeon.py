@@ -197,9 +197,9 @@ while s3 == 0:
             sstr = 'camp'
     elif s == 4:
         if lan == 1:
-            wstr = '商店'
+            sstr = '商店'
         elif lan == 2:
-            wstr = 'shop'
+            sstr = 'shop'
     #
     print('''    [%s]
 [%s]    [%s]
