@@ -1,5 +1,5 @@
-print('''An vector,is['math/phy', (a, b, c), x, y, z]''')
 def vec_2count(a, x, b):
+    '''An vector,is['math/phy', (a, b, c), x, y, z]'''
     if a[0] == 'math' and b[0] == 'math':
         c = ['math', (0, 0, 0), 0, 0, 0]
     elif a[0] == 'phy' and b[0] == 'math':
