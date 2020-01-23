@@ -112,94 +112,18 @@ while s3 == 0:
         armor = armor_s
     player = 'Health:%d, Armor:%d, Attack:%d, Money:%d, Food:%d' % (health, armor, attack, money, food)
     print(player)
+	if lan == 1:
+        event = ['半兽人', '骷髅', '营地', '商店']
+    elif lan == 2:
+        event = ['orc', 'skeleton', 'camp', 'shop']
     w = random.randint(1, 4)
     a = random.randint(1, 4)
     d = random.randint(1, 4)
     s = random.randint(1, 4)
-    #
-    if w == 1:
-        if lan == 1:
-            wstr = '半兽人'
-        elif lan == 2:
-            wstr = 'orc'
-    elif w == 2:
-        if lan == 1:
-            wstr = '骷髅'
-        elif lan == 2:
-            wstr = 'skeleton'
-    elif w == 3:
-        if lan == 1:
-            wstr = '营地'
-        elif lan == 2:
-            wstr = 'camp'
-    elif w == 4:
-        if lan == 1:
-            wstr = '商店'
-        elif lan == 2:
-            wstr = 'shop'
-    #
-    if a == 1:
-        if lan == 1:
-            astr = '半兽人'
-        elif lan == 2:
-            astr = 'orc'
-    elif a == 2:
-        if lan == 1:
-            astr = '骷髅'
-        elif lan == 2:
-            astr = 'skeleton'
-    elif a == 3:
-        if lan == 1:
-            astr = '营地'
-        elif lan == 2:
-            astr = 'camp'
-    elif a == 4:
-        if lan == 1:
-            astr = '商店'
-        elif lan == 2:
-            astr = 'shop'
-    #
-    if d == 1:
-        if lan == 1:
-            dstr = '半兽人'
-        elif lan == 2:
-            dstr = 'orc'
-    elif d == 2:
-        if lan == 1:
-            dstr = '骷髅'
-        elif lan == 2:
-            dstr = 'skeleton'
-    elif d == 3:
-        if lan == 1:
-            dstr = '营地'
-        elif lan == 2:
-            dstr = 'camp'
-    elif d == 4:
-        if lan == 1:
-            dstr = '商店'
-        elif lan == 2:
-            dstr = 'shop'
-    #
-    if s == 1:
-        if lan == 1:
-            sstr = '半兽人'
-        elif lan == 2:
-            sstr = 'orc'
-    elif s == 2:
-        if lan == 1:
-            sstr = '骷髅'
-        elif lan == 2:
-            sstr = 'skeleton'
-    elif s == 3:
-        if lan == 1:
-            sstr = '营地'
-        elif lan == 2:
-            sstr = 'camp'
-    elif s == 4:
-        if lan == 1:
-            sstr = '商店'
-        elif lan == 2:
-            sstr = 'shop'
+    wstr = event[w - 1]
+    astr = event[a - 1]
+    dstr = event[d - 1]
+    sstr = event[s - 1]
     #
     print('''    [%s]
 [%s]    [%s]
