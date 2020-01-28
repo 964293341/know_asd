@@ -1,4 +1,5 @@
 def ya(n):
+    '''return n!'''
     L = list(range(n + 1))
     m = 1
     for x in L:
@@ -9,6 +10,7 @@ def ya(n):
     return m
 ###
 def e(n):
+    '''求e的值evaluate e'''
     L = list(range(n + 1))
     e = 0
     for x in L:
