@@ -51,7 +51,7 @@ while quality_n < 3:
         print('health increase %d' % (quality_s))
 #
 quality_n = 0
-while quality_n < 3:
+while quality_n < 2:
     quality_n = quality_n + 1
     quality_s = random.randint(1, 13)
     armor = armor + quality_s
@@ -61,7 +61,7 @@ while quality_n < 3:
         print('armor increase %d' % (quality_s))
 #
 quality_n = 0
-while quality_n < 1:
+while quality_n < 2:
     quality_n = quality_n + 1
     quality_s = random.randint(1, 13)
     attack = attack + quality_s
@@ -277,19 +277,30 @@ while s3 == 0:
     if act == 4:
         print('#####')
         if lan == 1:
-            print('[A 食物->金钱, B 金钱->食物, C 离开]')
+            print('[A 食物->金钱, B 金钱->食物, C 金钱->护甲, D 金钱->攻击, E 离开]')
         elif lan == 2:
-            print('[A food->money, B money->food， C quit]')
+            print('[A food->money, B money->food, C money->armor, D money->attack, E quit]')
         shop_choose = input('choose:')
         shop_s = random.randint(1, 13)
         if shop_choose == 'A':
             food = food - shop_s
             money = money + shop_s
-        elif shop_choose == 'B':
-            food = food + shop_s
-            money = money - shop_s
-        else:
-            print('OK')
+		else:
+			if money - shop_s >= 0:
+        		if shop_choose == 'B':
+            		food = food + shop_s
+            		money = money - shop_s
+				elif shop_choose == 'C':
+					armor = armor + shop_s
+					money = money - shop_s
+				elif shop_choose == 'D':
+					attack = attack + shop_s
+					money = money - shop_s
+			else:
+				if lan == 1:
+					print('金钱不足')
+				elif lan == 2:
+					print('more money needed')
         print('#####')
     
 
